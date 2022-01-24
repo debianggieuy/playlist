@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport" content ="width=device-width,initial-scale=1.0">
+        <title>Playlist</title>
+
+        <!--call bootstrap style -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function playButton(currentlist){
+                // currentlist digunakan utk menyimpan audio
+                //yg diputar
+                let music = document.getElementsByTagName("audio");
+                for(let index=0; index<music.length; index++){
+                    if(musics[index] !== currentlist){
+                        musics[index].pause();
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3 class="text-white text-center">My Playlist</h3>
+                </div>
+                <div class="card-body bg-info">
+                    <ul class="list-group">
+                        <!-- list pertama-->
+                        <li class="list-group-item">
+                            <div class="row">
+                                <!-- div utk gambar-->
+                                <div class="col-lg-4 col-md-6">
+                                    <img src="1d.jpg" alt="404 gambar1"
+                                    width="120">
+                                </div>
+                                <!-- div utk judul dan control lagu-->
+                                <div class="col-lg-8 col-md-10">
+                                    <h5 class="text-primary">
+                                        Night Changes
+                                    </h5>
+                                    <audio src="One Direction - Night Changes.mp3"
+                                    controls onplay="playButton(this)"></audio>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- list kedua-->
+                        <li class="list-group-item">
+                            <div class="row">
+                                <!-- div utk gambar-->
+                                <div class="col-lg-4 col-md-6">
+                                    <img src="1d.jpg"404 gambar2"
+                                    width="120">
+                                </div>
+                                <!-- div utk judul dan control lagu-->
+                                <div class="col-lg-8 col-md-10">
+                                    <h5 class="text-primary">
+                                        Perfect
+                                    </h5>
+                                    <audio src="One Direction _ Perfect _Official Video_.mp3"
+                                    controls onplay="playButton(this)"></audio>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</head>
+<body>
+
+</body>
